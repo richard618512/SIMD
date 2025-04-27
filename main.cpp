@@ -63,10 +63,6 @@ int main()
         {
             auto start_hash = system_clock::now();
             bit32 state[4];
-            // for (int i = 0; i < q.guesses.size(); i += 4) {
-            //     string pw_batch[4] = { q.guesses[i], q.guesses[i+1], q.guesses[i+2], q.guesses[i+3] };
-            //     NEON_MD5Hash(*pw_batch, state);  // 同时计算 4 个密码
-            // }
             for (string pw : q.guesses)
             {
                 // TODO：对于SIMD实验，将这里替换成你的SIMD MD5函数
